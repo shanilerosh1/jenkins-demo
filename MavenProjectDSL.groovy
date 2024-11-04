@@ -7,10 +7,10 @@ job("First-Maven-project-via-dsm"){
         scm("* * * * *")
     }
     steps {
-        maven('clean package', 'C:\\Users\\Shanil\\.jenkins\\workspace\\jsp-build\\java-tomcat-sample\\pom.xml')
+        maven('clean package', '\\java-tomcat-sample\\pom.xml')
     }
     publishers {
-        archiveArtifacts 'java-tomcat-sample/target/*.war'
+        archiveArtifacts '**\\*.war'
     }
 
 }
