@@ -6,7 +6,7 @@ pipeline {
                 sh "mvn java-tomcat-sample/pom.xml clean package"
             }
             post {
-                sucesss {
+                successs {
                     echo "Archiving artiffcats"
                     archiveArtifacts artifacts: '**/*.war'
                 }
