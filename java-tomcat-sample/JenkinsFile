@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy to stageenvironemts') {
             steps {
-                build job: 'jsp-deploy
+                build job: 'jsp-deploy'
             }
         }
     }
