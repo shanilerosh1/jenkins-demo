@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    tools {
+        jdk 'JAVA_HOME'
+    }
     stages {
         stage('Build application') {
             steps {
-                bat "mvn java-tomcat-sample/pom.xml clean package"
+                bat "mvn -f java-tomcat-sample/pom.xml clean package"
             }
             post {
                 success {
